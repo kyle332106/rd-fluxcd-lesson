@@ -24,3 +24,9 @@ spec:
           envFrom:
             - configMapRef:
                 name: course-app-config
+          volumeMounts:
+            - name: appdata
+              mountPath: /data
+      volumes:
+        - name: appdata
+          emptyDir: {}
